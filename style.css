@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.header{
+    font-weight: 800;
+    font-size: 32px;
+    text-align: center;
+    background-color: hotpink;
+}
+
+.container{
+    display: flex;
+    background-color: rgb(253, 229, 229);
+    
+}
+.conClassLeft{
+    flex: 0.5;
+    border: 5px solid pink;
+    display: flex;
+    flex-direction: column;
+}
+.conClassRight{
+    flex: 2;
+    border: 5px solid red;
+    border-radius: 20px;
+    background-color: red;
+    
+
+}
+
+#grid{
+    
+    display: grid;
+    /* grid-template-columns: repeat(16,30px); */
+    grid-auto-rows: minmax(10px,auto);
+    justify-content: center;
+}
+
+.grid1 div{
+    background-color: white;
+    border: 0.5px solid rgb(114, 114, 114);
+}
+.grid1 div:hover{
+    background-color: black;
+}
