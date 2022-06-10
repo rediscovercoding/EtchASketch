@@ -1,7 +1,10 @@
 const box = document.querySelector('#grid');
 
+
 function createGrid(size){
     
+    
+
 for (let i =0; i<(size*size); i++){
     let div = document.createElement('div');
     div.classList.add('boxClass');
@@ -27,9 +30,14 @@ each.style.backgroundColor= 'white';
 function create32(){
     let r = document.querySelector(':root');
     r.style.setProperty('--size', '32');
-    createGrid(27.7);
+    let cleardiv = document.querySelectorAll('.boxClass');
+    for (each of cleardiv){
+        each.parentElement.removeChild(each);
+        }
+
+    createGrid(32);
     reset();
-    document.getElementById("button").disabled= true;
+    
 }
 
 function color(){
@@ -37,15 +45,41 @@ function color(){
     let colorsquares = document.getElementsByClassName('boxClass');
     
     
-    for (colorsq of colorsquares){
+    for (let i =0; i<colorsquares.length; i++){
+    let colorsq = colorsquares[i];    
         
-        colorsq.classList.add('color');
         colorsq.addEventListener('mouseover', colorFunct);
         function colorFunct(){
-            colorsq.style.backgroundColor= 'blue';
-            console.log('mouse');
+            var r = () => Math.random()* 255 >> 0;
+            colorsq.style.backgroundColor= `rgb(${r()}, ${r()}, ${r()})`;
+            
+        }   
+    }
+    }
+
+function black(){
+    reset();
+    let colorsquares = document.getElementsByClassName('boxClass');  
+    
+    for (let i =0; i<colorsquares.length; i++){
+    let colorsq = colorsquares[i];    
+        
+        colorsq.addEventListener('mouseover', colorFunct);
+        function colorFunct(){
+            colorsq.style.backgroundColor= `black`;
+            
         }
         
     }
     }
     
+
+function create16(){
+    let cleardiv = document.querySelectorAll('.boxClass');
+    for (each of cleardiv){
+        each.parentElement.removeChild(each);
+        }
+    let r = document.querySelector(':root');
+    r.style.setProperty('--size', '16');
+    createGrid(16);
+}
