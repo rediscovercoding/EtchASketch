@@ -27,19 +27,20 @@ for (each of cleardiv){
 each.style.backgroundColor= 'white';
 }
 }
-function create32(){
-    let r = document.querySelector(':root');
-    r.style.setProperty('--size', '32');
+// Below code resets the grid with for loop and creates new grid
+function create(size){
+    
     let cleardiv = document.querySelectorAll('.boxClass');
     for (each of cleardiv){
         each.parentElement.removeChild(each);
         }
-
-    createGrid(32);
+    let r = document.querySelector(':root');
+    r.style.setProperty('--size', size);
+    createGrid(size);
     reset();
     
 }
-
+// Below function is for colored squares
 function color(){
     reset();
     let colorsquares = document.getElementsByClassName('boxClass');
@@ -74,12 +75,3 @@ function black(){
     }
     
 
-function create16(){
-    let cleardiv = document.querySelectorAll('.boxClass');
-    for (each of cleardiv){
-        each.parentElement.removeChild(each);
-        }
-    let r = document.querySelector(':root');
-    r.style.setProperty('--size', '16');
-    createGrid(16);
-}
