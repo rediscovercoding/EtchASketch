@@ -5,21 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch A Sketch</title>
-    <script src="javaScript.js" defer></script>
+    
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+        --size: 16;
+        }
+    </style>
 </head>
 <body>
     <div class="header">Etch A Sketch</div>
     <div class="container">
         <div class="conClassLeft">
-            <button>Color</button>
-            <button onclick="createGrid(16)">16 X 16</button>
-            <button onclick="createGrid(32)">32 X 32</button>
-            <button>Reset</button>
+            <button onclick="color()">Color</button>
+            
+            <button onclick="create32()" id='button'>32 X 32</button>
+            <button onclick="reset()">Reset</button>
         </div>
-        <div id='containerRight' class="conClassRight">
-            <div id='grid' class="grid1"></div>
+        <div id='containerRight' class= 'conClassRight'>
+            <div id='grid' class='gridBox'></div>
         </div>
     </div>
+    <script src="JavaScript.js">
+        
+    </script>
 </body>
 </html>

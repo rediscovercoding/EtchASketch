@@ -1,3 +1,5 @@
+
+
 body{
     display: flex;
     flex-direction: column;
@@ -24,25 +26,22 @@ body{
 }
 .conClassRight{
     flex: 2;
-    border: 5px solid red;
+    border: 5px solid white;
     border-radius: 20px;
     background-color: red;
-    
-
-}
-
+} 
 #grid{
-    
     display: grid;
-    /* grid-template-columns: repeat(16,30px); */
-    grid-auto-rows: minmax(10px,auto);
+    grid-template-columns: repeat(var(--size), 10px);
+    grid-template-rows: repeat(var(--size), 10px);
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
     justify-content: center;
+    margin: 10px;
+    border: 2px solid white;
+}
+.boxClass{
+    background-color: white;
+    border: 0.5px solid rgb(201, 200, 200);
 }
 
-.grid1 div{
-    background-color: white;
-    border: 0.5px solid rgb(114, 114, 114);
-}
-.grid1 div:hover{
-    background-color: black;
-}
